@@ -1,0 +1,259 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 20, 25, 0.9);
+    z-index: 2;
+}
+
+.header__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.header__logo {
+    flex: 0 0 140px;
+    position: relative;
+    z-index: 3;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.header__burger {
+    display: none;
+}
+
+
+.header__list {
+    display: flex;
+    align-self: flex-end;
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    list-style: none;
+
+    .header__link {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 15px 25px;
+        position: relative;
+    }
+
+    .header__link::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        height: calc(100% + 40px);
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: all .2s;
+    }
+
+    .header__link:hover::before {
+        opacity: 1;
+    }
+
+    .header__link-text {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-style: 18px;
+        font-weight: 900px;
+    }
+
+    .header__link-text {
+        position: relative;
+        transition: color .2s;
+    }
+
+    .header__link:hover .header__link-text {
+        color: #1f1f1f;
+    }
+
+}
+
+.content {
+    padding-top: 100px;
+}
+
+.content__text {
+    font-size: 16px;
+
+    p {
+        margin-bottom: 25px;
+    }
+}
+
+.header__end {
+    z-index: 99;
+    display: flex;
+    margin-top: 5px;
+}
+
+.header__login {
+    padding-right: 30px;
+    position: relative;
+
+    .header__login-link {
+        text-decoration: none;
+    }
+
+    .login-text {
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-style: 18px;
+        font-weight: 900px;
+    }
+
+    .login-icon {
+        position: absolute;
+        top: -2px;
+        left: -30px;
+    }
+}
+
+.cart-text {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-style: 18px;
+    font-weight: 900px;
+    position: relative;
+
+    &::before {
+        content: "0";
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        transform: scale(0.7);
+        width: 20px;
+        top: -20px;
+        left: 10px;
+        background: red;
+        border-radius: 25px;
+    }
+}
+
+
+@media(max-width:992px) {
+
+    .header__list .header__link {
+        padding: 15px 15px;
+    }
+
+    .header__link-text {
+        font-style: 16px;
+    }
+
+    .header__login {
+        padding-right: 20px;
+    }
+}
+
+@media (max-width:767px) {
+    .header__body {
+        height: 50px;
+    }
+
+    .header__login {
+        display: none;
+    }
+
+    .header__burger {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+        order: -1;
+
+        span {
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: transform 0.7s ease-in-out;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: transform .5s ease-in;
+        }
+
+        &::before {
+            transform: translateY(12px);
+        }
+
+        &::after {
+            transform: translateY(-12px);
+
+        }
+    }
+
+    .header__burger.active {
+        .burger_middle {
+            transform: scale(0);
+        }
+
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .header__menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background-color: gray;
+        padding: 70px 10px 0px 10px;
+        padding-top: 70px;
+        transition: left 0.5s ease-out;
+
+        &.active {
+            left: 0;
+        }
+    }
+
+    .header__list {
+        display: block;
+
+        li {
+            margin-bottom: 20px;
+        }
+    }
+}
