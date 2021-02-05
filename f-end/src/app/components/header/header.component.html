@@ -8,7 +8,7 @@
                 <div class="header__burger" [class.active]="burgerMenuOpen" (click)="toggleHamburger()">
                     <span class="burger_middle"></span>
                 </div>
-                <nav class="header__menu" [class.active]="burgerMenuOpen">
+                <nav class="header__menu">
                     <ul class="header__list">
                         <li>
                             <a href="#" class="header__link">
@@ -40,19 +40,19 @@
                         </li>
                     </ul>
                 </nav>
+
                 <!-- Login -->
                 <div class="header__end">
                     <div class="header__login">
                         <a href="#" class="header__login-link">
                             <span class="login-text">
                                 <mat-icon class="login-icon">login</mat-icon>
-                                LogIn
                             </span>
                         </a>
                     </div>
                     <div class="header__cart">
                         <a href="#" class="header__cart-link">
-                            <span class="cart-text">
+                            <span class="cart-text" [attr.data-before]="3">
                                 <mat-icon class="cart-icon">shopping_cart</mat-icon>
                             </span>
                         </a>
@@ -60,8 +60,43 @@
                 </div>
 
             </div>
+
         </div>
     </header>
+    <nav class="mobile-menu" [class.active]="burgerMenuOpen">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <mat-icon class="login-icon">home</mat-icon>
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <mat-icon class="login-icon">local_dining</mat-icon>
+                    Menu
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <mat-icon class="login-icon">groups</mat-icon>
+                    About us
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <mat-icon class="login-icon">contacts</mat-icon>
+                    Contacts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <mat-icon class="login-icon">login</mat-icon>
+                    Login
+                </a>
+            </li>
+        </ul>
+    </nav>
     <div class="content">
         <div class="container">
             <div class="content__text">
