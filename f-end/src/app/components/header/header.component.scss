@@ -93,17 +93,6 @@
 
 }
 
-.content {
-    padding-top: 100px;
-}
-
-.content__text {
-    font-size: 16px;
-
-    p {
-        margin-bottom: 25px;
-    }
-}
 
 // LogIn & Cart
 .header__end {
@@ -114,49 +103,49 @@
     .material-icons {
         font-size: 30px;
     }
-}
 
-.header__login {
-    padding-right: 30px;
+    .header__login {
+        padding-right: 30px;
 
-    .header__login-link {
-        text-decoration: none;
+        .header__login-link {
+            text-decoration: none;
+        }
+
+        .login-text {
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 35px;
+            font-weight: 900px;
+        }
+
     }
 
-    .login-text {
-        color: #fff;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 35px;
-        font-weight: 900px;
-    }
+    .header__cart {
+        margin-right: 10px;
+        position: relative;
 
-}
+        .cart-text {
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 35px;
+            font-weight: 900px;
+            position: relative;
 
-.header__cart {
-    margin-right: 10px;
-    position: relative;
-}
-
-.cart-text {
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
-    font-weight: 900px;
-    position: relative;
-
-    &::before {
-        content: attr(data-before);
-        font-size: 15px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: -5px;
-        left: 15px;
-        background: red;
+            &::before {
+                content: attr(data-before);
+                font-size: 15px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: -5px;
+                left: 15px;
+                background: red;
+            }
+        }
     }
 }
 
@@ -180,6 +169,7 @@
             height: 250px;
             overflow-y: scroll;
         }
+
         .cart-menu__item {
 
             .cart-menu__item-start {
