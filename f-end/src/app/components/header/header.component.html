@@ -2,7 +2,7 @@
     <header class="header">
         <div class="container">
             <div class="header__body">
-                <a href="#" class="header__logo">
+                <a routerLink="" class="header__logo">
                     <img src="assets/img/common/logo.svg" alt="Header__logo">
                 </a>
                 <div class="header__burger" [class.active]="burgerMenuOpen" (click)="toggleHamburger()">
@@ -11,14 +11,14 @@
                 <nav class="header__menu">
                     <ul class="header__list">
                         <li>
-                            <a href="#" class="header__link">
-                                <span class="header__link-text">
+                            <a routerLink="" class="header__link">
+                                <span class="header__link-text" >
                                     Home
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="header__link">
+                            <a routerLink="menu" class="header__link">
                                 <span class="header__link-text">
                                     Menu
                                 </span>
@@ -98,31 +98,31 @@
     <nav class="mobile-menu" [class.active]="burgerMenuOpen">
         <ul class="nav-list">
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a routerLink="" class="nav-link" (click)="toggleHamburger()">
                     <mat-icon class="login-icon">home</mat-icon>
                     Home
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a routerLink="menu" class="nav-link" (click)="toggleHamburger()">
                     <mat-icon class="login-icon">local_dining</mat-icon>
                     Menu
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" (click)="toggleHamburger()">
                     <mat-icon class="login-icon">groups</mat-icon>
                     About us
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" (click)="toggleHamburger()">
                     <mat-icon class="login-icon">contacts</mat-icon>
                     Contacts
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" (click)="toggleHamburger()">
                     <mat-icon class="login-icon">login</mat-icon>
                     Login
                 </a>
