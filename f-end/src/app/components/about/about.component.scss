@@ -1,0 +1,60 @@
+.content {
+    padding-top: 150px;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+
+    .about-section__image {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        .section-about__logo {
+            height: 175px;
+        }
+    }
+
+    .about-section__main {
+        width: 70%;
+        color: #fff;
+        text-align: center;
+
+        .about-section__title {
+            color: #FFA650;
+        }
+
+        .about-section__rating {
+            color: gold;
+            text-align: start;
+        }
+
+        .about-section__review {
+            h3 {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            h4 {
+                text-align: end;
+            }
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .content {
+        padding-top: 80px;
+    }
+    .about-section {
+        display: block;
+        .about-section__image {
+            display: none;
+        }
+        .about-section__main {
+            width: 100%;
+        }
+    }
+}

@@ -11,28 +11,35 @@
                 <nav class="header__menu">
                     <ul class="header__list">
                         <li>
-                            <a routerLink="" class="header__link">
-                                <span class="header__link-text" >
+                            <a [routerLink]="['/home']" routerLinkActive='isActive' class="header__link">
+                                <span class="header__link-text">
                                     Home
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a routerLink="menu" class="header__link">
-                                <span class="header__link-text">
-                                    Menu
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="header__link">
+                            <a [routerLink]="['/about']" routerLinkActive='isActive' class="header__link">
                                 <span class="header__link-text">
                                     About us
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="header__link">
+                            <a [routerLink]="['/menu']" routerLinkActive='isActive' class="header__link">
+                                <span class="header__link-text">
+                                    Menu
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/team']" routerLinkActive='isActive' class="header__link">
+                                <span class="header__link-text">
+                                    Team
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/contacts']" routerLinkActive='isActive' class="header__link">
                                 <span class="header__link-text">
                                     Contacts
                                 </span>
@@ -56,35 +63,6 @@
                         <a href="#" class="header__cart-link">
                             <span class="cart-text" [attr.data-before]="3">
                                 <mat-icon class="cart-icon">shopping_cart</mat-icon>
-
-                                <!-- TODO Cart Component -->
-                                <!-- <div class="cart-menu">
-                                    <ul>
-                                        <div class="cart-menu__items">
-                                            <li class="cart-menu__item" *ngFor="let cart of cartItems;let i=index">
-                                                <div class="cart-menu__item-start">
-                                                    <span class="cart-menu__item-name">{{cart.name}}</span>
-                                                    <mat-icon class="cart-icon__cancel">cancel</mat-icon>
-                                                </div>
-                                                <div class="cart-menu__item-end">
-                                                    <div class="counter">
-                                                        <mat-icon class="cart-menu__icon" (click)="Increment(i)">add</mat-icon>
-                                                        <div class="cart-item__count">{{cart.quantity}}</div>
-                                                        <mat-icon class="cart-menu__icon" (click)="Decrement()">remove</mat-icon>
-                                                    </div>
-                                                    <div class="cart-item__price">{{cart.price | currency:"USD"}}</div>
-                                                </div>
-                                                <hr>
-                                            </li>
-                                        </div>
-
-                                        <div class="cart-menu__footer">
-                                            <span class="total-sum">Total: {{160 | currency:"USD"}}</span>
-
-                                            <button class="checkout-btn">Checkout</button>
-                                        </div>
-                                    </ul>
-                                </div> -->
                             </span>
                         </a>
                     </div>
@@ -98,31 +76,37 @@
     <nav class="mobile-menu" [class.active]="burgerMenuOpen">
         <ul class="nav-list">
             <li class="nav-item">
-                <a routerLink="" class="nav-link" (click)="toggleHamburger()">
+                <a [routerLink]="['/home']" class="nav-link" (click)="toggleHamburger()">
                     <mat-icon class="login-icon">home</mat-icon>
                     Home
                 </a>
             </li>
             <li class="nav-item">
-                <a routerLink="menu" class="nav-link" (click)="toggleHamburger()">
-                    <mat-icon class="login-icon">local_dining</mat-icon>
-                    Menu
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link" (click)="toggleHamburger()">
+                <a [routerLink]="['/about']" class="nav-link" (click)="toggleHamburger()">
                     <mat-icon class="login-icon">groups</mat-icon>
                     About us
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link" (click)="toggleHamburger()">
+                <a [routerLink]="['/menu']" class="nav-link" (click)="toggleHamburger()">
+                    <mat-icon class="login-icon">local_dining</mat-icon>
+                    Menu
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/login']" class="nav-link" (click)="toggleHamburger()">
+                    <mat-icon class="login-icon">group_add</mat-icon>
+                    Team
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/contacts']" class="nav-link" (click)="toggleHamburger()">
                     <mat-icon class="login-icon">contacts</mat-icon>
                     Contacts
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link" (click)="toggleHamburger()">
+                <a [routerLink]="['/login']" class="nav-link" (click)="toggleHamburger()">
                     <mat-icon class="login-icon">login</mat-icon>
                     Login
                 </a>

@@ -5,6 +5,7 @@
     z-index: 99;
     width: 100%;
 }
+
 .header {
     position: relative;
     width: 100%;
@@ -32,6 +33,7 @@
 .header__logo {
     flex: 0 0 140px;
     position: relative;
+    z-index: 99;
 
     img {
         max-width: 100%;
@@ -96,6 +98,11 @@
         color: #1f1f1f;
     }
 
+    .isActive.header__link {
+        .header__link-text {
+            text-decoration: underline;
+        }
+    }
 }
 
 

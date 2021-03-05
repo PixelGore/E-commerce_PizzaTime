@@ -1,11 +1,14 @@
-import { MainComponent } from './components/main/main.component';
-import { MenuComponent } from './components/menu/menu.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
+import { MainComponent } from './components/main/main.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 const routes: Routes = [
-  {path: '' , component: MainComponent},
+  {path: '' , redirectTo:'home', pathMatch:"full"},
+  {path: 'home' , component: MainComponent},
   {path: 'menu' , component: MenuComponent},
+  {path: 'about' , component: AboutComponent},
 ];
 
 @NgModule({
